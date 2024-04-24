@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki Journey</title>
+    <style>
+        @font-face {
+            font-family: 'LinBiolinum_aS'; /* A name to use later when referring to this font */
+            src: url('LinBiolinum_aS.ttf') format('truetype'); /* The path to the font file */
+            }
+
+        /* Add your styles here */
+        body { 
+            font-family: Arial, sans-serif;
+            min-width: 500px; /* Set the minimum width */
+            min-height: 250px; /* Set the minimum height */ }
+        .divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+        .header-container {
+            display: flex; /* Activates Flexbox layout mode */
+            align-items: center; /* Vertically centers the items in the container */
+            justify-content: space-between; /* Spreads the items to occupy the full width */
+            font-family: 'LinBiolinum_aS', sans-serif; /* Fallback to sans-serif if custom font fails */
+        }
+
+        .header-container h1 {
+            margin: 0; /* Removes default margin to prevent excessive spacing */
+            flex-grow: 1; /* Allows the title to grow and occupy available space */
+        }
+
+        #shareButton {
+            margin-left: 20px; /* Adds some space between the title and the button */
+            background-color: transparent; /* Makes the button's background transparent */
+            border: none; /* Removes the border; alternatively, set to 'transparent' */
+
+        }
+        #shareButton:hover {
+            background-color: #f2f2f2; /* Light gray background on hover */
+        }
+
+        #shareButton:focus {
+            outline: none; /* Removes the outline that browsers might add on focus */
+        }
+        #infoButton {
+            margin-left: 5px; /* Adds some space between the title and the button */
+            background-color: transparent; /* Makes the button's background transparent */
+            border: none; /* Removes the border; alternatively, set to 'transparent' */
+
+        }
+        #infoButton:hover {
+            background-color: #f2f2f2; /* Light gray background on hover */
+        }
+
+        #infoButton:focus {
+            outline: none; /* Removes the outline that browsers might add on focus */
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="pikaday.css">
+    <script src="d3.v7.min.js"></script>
+    <script src="pikaday.js"></script>
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Wiki Journey</h1>
+        <input type="text" id="datePicker" readonly>
+        <div>
+            <button id="shareButton">
+                <img src="downloads.png" alt="Share" width="24" height="24">
+            </button>
+            <button id="infoButton">
+                <img src="info.png" alt="Info" width="24" height="24">
+            </button>
+        </div>
+    </div>    
+    <hr class="divider">
+    <div id="graph"></div>
+    <script src="buttons.js"></script>
+</body>
+</html
+

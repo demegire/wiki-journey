@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Wiki Journey",
+    "version": "1.2",
+    "description": "Visualizes your daily Wikipedia adventures",
+    "permissions": [
+    "tabs",
+    "storage",
+    "*://*.wikipedia.org/*"
+    ],
+    "background": {
+    "scripts": ["background.js"]
+    },
+    "content_scripts": [
+    {
+        "matches": ["*://*.wikipedia.org/*"],
+        "js": ["content.js"]
+    }
+    ],
+    "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+    },
+    "icons": {
+    "48": "icon.png"
+    },
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "web_accessible_resources": [
+    "d3.v7.min.js",
+    "pikaday.js",
+    "LinBiolinum_aS.ttf"
+    ]
+}
