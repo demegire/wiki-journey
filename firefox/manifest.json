@@ -6,7 +6,8 @@
     "permissions": [
     "tabs",
     "storage",
-    "*://*.wikipedia.org/*"
+    "*://*.wikipedia.org/*",
+    "*://*.wikiwand.org/*"
     ],
     "background": {
     "scripts": ["background.js"]
@@ -14,6 +15,7 @@
     "content_scripts": [
     {
         "matches": ["*://*.wikipedia.org/*"],
+        "matches": ["*://*.wikiwand.com/*"],
         "js": ["content.js"]
     }
     ],
