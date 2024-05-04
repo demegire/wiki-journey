@@ -6,7 +6,8 @@
     "permissions": [
     "tabs",
     "storage",
-    "*://*.wikipedia.org/*"
+    "*://*.wikipedia.org/*",
+    "*://*.wikiwand.org/*"
     ],
     "background": {
     "scripts": ["background.js"]
