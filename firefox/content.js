@@ -7,7 +7,7 @@ function isValidWikipediaArticle() {
 
 function sendArticleInfo() {
     if (isValidWikipediaArticle()) {
-        const title = document.querySelector('h1').innerText;
+        const title = document.querySelector('h1 > :first-child').innerText;
         const url = window.location.href;
         const parent = document.referrer.includes("wikipedia.org") && isValidWikipediaArticle(document.referrer) ? document.referrer : null;
 
